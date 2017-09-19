@@ -1,0 +1,88 @@
+// Base form styles
+// -------------------------------------------------------------------
+// Apply `.form-control` to any of the following form controls:
+// select
+// textarea
+// input (of any type)
+.form-control {
+    background-image: none; // Reset unusual Firefox-on-Android default style
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    color: $text-color;
+    display: block;
+    font-family: $font-family--ui;
+    font-size: 1rem;
+    line-height: $line-height--base;
+    max-width: 100%;
+    padding: $form-padding;
+    width: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+.select {
+    background-color: $lightest-gray;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    color: $text-color;
+    cursor: pointer;
+    max-width: 100%;
+    min-width: 25%;
+}
+
+.label {
+    cursor: default;
+    display: inline-block;
+    max-width: 100%; // Force IE8 to wrap long content
+}
+
+.legend {
+    display: block;
+    white-space: normal;
+    width: 100%;
+}
+
+
+// Form layouts
+// -------------------------------------------------------------------
+.form--stacked {
+    .input,
+    .select,
+    .radio,
+    .checkbox,
+    .textarea,
+    .label {
+        display: block;
+        width: 100%;
+    }
+}
+
+.form--inline {
+    .form-control {
+        display: inline-block;
+        vertical-align: middle;
+        width: auto; // Prevent labels from stacking above inputs
+                     // in `.form-group`
+    }
+
+    .radio,
+    .checkbox {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+
+// Placeholder styling
+// -------------------------------------------------------------------
+::-webkit-input-placeholder {
+    color: $light-gray;
+    -webkit-font-smoothing: antialiased;
+}
+::-moz-placeholder {
+    color: $light-gray;
+    -moz-osx-font-smoothing: grayscale;
+}
+:-ms-input-placeholder {
+    color: $light-gray;
+}
